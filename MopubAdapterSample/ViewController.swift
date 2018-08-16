@@ -8,13 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MPTableViewAdPlacerDelegate {
 
   @IBOutlet var tableView: UITableView!
-  
+  var placer: MPTableViewAdPlacer!
+
   override func viewDidLoad() {
-      super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
+    super.viewDidLoad()
+
+    let settings = MPStaticNativeAdRendererSettings()
+    settings.renderingViewClass = MopubAdCell.self
+    settings.viewSizeHandler = { maxWidth in return CGSize(width: maxWidth, height: 180) }
+
+    let config = MPStaticNativeAdRenderer.rendererConfiguration(with: settings)
+
+    placer = MPTableViewAdPlacer(tableView: tableView, viewController: self, rendererConfigurations: [config!])
+    placer.delegate = self;
+
+    placer.loadAds(forAdUnitID: "76a3fefaced247959582d2d2df6f4757") // 5e9875f612744641ac2ed9faeaf134b2
   }
 }
 
@@ -29,4 +40,3 @@ extension ViewController: UITableViewDataSource {
     return cell
   }
 }
-

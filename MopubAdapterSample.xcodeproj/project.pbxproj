@@ -225,6 +225,8 @@
 		2048451E21250FA0006CF2F0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048451D21250FA0006CF2F0 /* CoreMedia.framework */; };
 		2048452021250FA5006CF2F0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048451F21250FA5006CF2F0 /* CoreLocation.framework */; };
 		2048452221250FAB006CF2F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048452121250FAB006CF2F0 /* CoreGraphics.framework */; };
+		2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048452B212547FA006CF2F0 /* MopubAdCell.swift */; };
+		2048452E212547FA006CF2F0 /* MopubAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2048452C212547FA006CF2F0 /* MopubAdCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -663,6 +665,8 @@
 		2048451F21250FA5006CF2F0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2048452121250FAB006CF2F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2048452821251145006CF2F0 /* MopubAdapterSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MopubAdapterSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		2048452B212547FA006CF2F0 /* MopubAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MopubAdCell.swift; sourceTree = "<group>"; };
+		2048452C212547FA006CF2F0 /* MopubAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MopubAdCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -716,13 +720,15 @@
 		2048427721250CD3006CF2F0 /* MopubAdapterSample */ = {
 			isa = PBXGroup;
 			children = (
+				2048452821251145006CF2F0 /* MopubAdapterSample-Bridging-Header.h */,
 				2048427821250CD3006CF2F0 /* AppDelegate.swift */,
 				2048427A21250CD3006CF2F0 /* ViewController.swift */,
+				2048452B212547FA006CF2F0 /* MopubAdCell.swift */,
+				2048452C212547FA006CF2F0 /* MopubAdCell.xib */,
 				2048427C21250CD3006CF2F0 /* Main.storyboard */,
 				2048427F21250CD5006CF2F0 /* Assets.xcassets */,
 				2048428121250CD5006CF2F0 /* LaunchScreen.storyboard */,
 				2048428421250CD5006CF2F0 /* Info.plist */,
-				2048452821251145006CF2F0 /* MopubAdapterSample-Bridging-Header.h */,
 			);
 			path = MopubAdapterSample;
 			sourceTree = "<group>";
@@ -1410,6 +1416,7 @@
 				2048447B21250DA1006CF2F0 /* MPMutedBtn@3x.png in Resources */,
 				2048447321250DA1006CF2F0 /* MPCloseBtn.png in Resources */,
 				2048428021250CD5006CF2F0 /* Assets.xcassets in Resources */,
+				2048452E212547FA006CF2F0 /* MopubAdCell.xib in Resources */,
 				2048447D21250DA1006CF2F0 /* MPMutedBtn.png in Resources */,
 				2048447F21250DA1006CF2F0 /* MPDAAIcon@2x.png in Resources */,
 				2048447821250DA1006CF2F0 /* MPCloseButtonX@3x.png in Resources */,
@@ -1545,6 +1552,7 @@
 				2048449621250DA1006CF2F0 /* MPAdBrowserController.m in Sources */,
 				204844E721250DA1006CF2F0 /* MOPUBNativeVideoAdRendererSettings.m in Sources */,
 				204844E021250DA1006CF2F0 /* MPVASTIndustryIcon.m in Sources */,
+				2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */,
 				204844F421250DA1006CF2F0 /* MOPUBNativeVideoAdRenderer.m in Sources */,
 				2048446121250DA1006CF2F0 /* MPNativeAdRequestTargeting.m in Sources */,
 				204844E121250DA1006CF2F0 /* MPVASTInline.m in Sources */,
