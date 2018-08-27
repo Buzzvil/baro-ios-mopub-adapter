@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: "")
+    let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: "5e9875f612744641ac2ed9faeaf134b2")
 
     MoPub.sharedInstance().initializeSdk(with: sdkConfig, completion: nil)
 

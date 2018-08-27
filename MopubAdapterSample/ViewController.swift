@@ -21,11 +21,12 @@ class ViewController: UIViewController, MPTableViewAdPlacerDelegate {
     settings.viewSizeHandler = { maxWidth in return CGSize(width: maxWidth, height: 180) }
 
     let config = MPStaticNativeAdRenderer.rendererConfiguration(with: settings)
+    config?.supportedCustomEvents = ["BuzzNativeCustomEvent"]
 
     placer = MPTableViewAdPlacer(tableView: tableView, viewController: self, rendererConfigurations: [config!])
     placer.delegate = self;
 
-    placer.loadAds(forAdUnitID: "76a3fefaced247959582d2d2df6f4757") // 5e9875f612744641ac2ed9faeaf134b2
+    placer.loadAds(forAdUnitID: "5e9875f612744641ac2ed9faeaf134b2") // 5e9875f612744641ac2ed9faeaf134b2, test: 76a3fefaced247959582d2d2df6f4757
   }
 }
 
