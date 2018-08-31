@@ -8,7 +8,6 @@
 
 import Foundation
 import BuzzNative
-//import Kingfisher
 
 @objc(BuzzNativeAdAdapter)
 class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter {
@@ -35,24 +34,24 @@ class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter {
     }
   }
 
-//  func enableThirdPartyClickTracking() -> Bool {
-//    return true
-//  }
-
-  func willAttach(to view: UIView!) {
-    if let nativeAdRendering = delegate.viewControllerForPresentingModalView() as? MPNativeAdRendering {
-      delegate.viewControllerForPresentingModalView().view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(trackClick)))
-    }
+  func enableThirdPartyClickTracking() -> Bool {
+    return false
   }
 
+  func willAttach(to view: UIView!) {
 
-  
+    
+//    if let nativeAdRendering = delegate.viewControllerForPresentingModalView() as? MPNativeAdRendering {
+////      [self.fbNativeAd registerViewForInteraction:view mediaView:self.mediaView iconView:self.iconView viewController:[self.delegate viewControllerForPresentingModalView]];
+// delegate.viewControllerForPresentingModalView().view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(trackClick)))
+//    }
+  }
+
   func displayContent(for URL: URL!, rootViewController controller: UIViewController!) {
 
   }
 
   func trackClick() {
-
 //    nativeAd.handleClick()
   }
 
