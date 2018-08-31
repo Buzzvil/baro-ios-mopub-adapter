@@ -9,12 +9,18 @@
 import Foundation
 import BuzzNative
 
+fileprivate var BuzzNativeInitialized = false
+
 @objc(BuzzNativeCustomEvent)
 class BuzzNativeCustomEvent: MPNativeCustomEvent {
   override func requestAd(withCustomEventInfo info: [AnyHashable : Any]!) {
-    BuzzNative.configure(logging: true)
+    if !BuzzNativeInitialized {
+      BuzzNative.configure(logging: true)
+      BuzzNativeInitialized = true
+    }
+
     if let placementId = info["unitID"] as? String {
-      let adLoader = BNAdLoader(unitId: placementId, preloadEnabled: true)
+      let adLoader = BNAdLoader(unitId: placementId)
       adLoader.loadAd(userProfile: nil, location: nil) { [weak self] (ad, error) in
         if let ad = ad {
           let adAdapter = BuzzNativeAdAdapter(ad: ad)
