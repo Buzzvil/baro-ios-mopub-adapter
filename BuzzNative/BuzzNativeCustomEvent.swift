@@ -25,9 +25,20 @@ class BuzzNativeCustomEvent: MPNativeCustomEvent {
         if let ad = ad {
           let adAdapter = BuzzNativeAdAdapter(ad: ad)
           let mpAd = MPNativeAd(adAdapter: adAdapter)
-          self?.delegate.nativeCustomEvent(self, didLoad: mpAd)
+          
+          if let urlString = ad.creative.imageURL, let url = URL(string: urlString) {
+            self?.precacheImages(withURLs: [url], completionBlock: { (errors) in
+              if errors == nil {
+                self?.delegate.nativeCustomEvent(self, didLoad: mpAd)
+              } else {
+                self?.delegate.nativeCustomEvent(self, didFailToLoadAdWithError: MPNativeAdNSErrorForImageDownloadFailure())
+              }
+            })
+          } else {
+            self?.delegate.nativeCustomEvent(self, didFailToLoadAdWithError: MPNativeAdNSErrorForInvalidImageURL())
+          }
         } else {
-          self?.delegate.nativeCustomEvent(self, didFailToLoadAdWithError: error)
+          self?.delegate.nativeCustomEvent(self, didFailToLoadAdWithError: MPNativeAdNSErrorForInvalidAdServerResponse(error?.localizedDescription))
         }
       }
     } else {

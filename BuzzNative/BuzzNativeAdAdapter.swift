@@ -10,15 +10,16 @@ import Foundation
 import BuzzNative
 
 @objc(BuzzNativeAdAdapter)
-class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter {
-  public var properties: [AnyHashable : Any]!
+class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDelegate {
+  var properties: [AnyHashable : Any]!
   var defaultActionURL: URL!
   var delegate: MPNativeAdAdapterDelegate!
-
+  
+  let impressionTimer: MPAdImpressionTimer
+  
   var ad: BNAd!
 
   init(ad: BNAd) {
-    super.init()
     self.ad = ad
 
     var properties: [AnyHashable: Any] = [:]
@@ -27,33 +28,44 @@ class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter {
     properties[kAdMainImageKey] = ad.creative.imageURL
     properties[kAdIconImageKey] = ad.creative.iconURL
     properties[kAdCTATextKey] = ad.creative.callToAction
+    properties[kImpressionTrackerURLsKey] = ad.impressionTrackers
+    properties[kClickTrackerURLKey] = ad.clickTrackers
+    properties[kPrivacyIconTapDestinationURL] = ad.creative.adchoiceURL
     self.properties = properties
 
     if let url = ad.creative.clickURL {
       self.defaultActionURL = URL(string: url)
     }
-  }
-
-  func enableThirdPartyClickTracking() -> Bool {
-    return false
-  }
-
-  func willAttach(to view: UIView!) {
-
     
-//    if let nativeAdRendering = delegate.viewControllerForPresentingModalView() as? MPNativeAdRendering {
-////      [self.fbNativeAd registerViewForInteraction:view mediaView:self.mediaView iconView:self.iconView viewController:[self.delegate viewControllerForPresentingModalView]];
-// delegate.viewControllerForPresentingModalView().view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(trackClick)))
-//    }
+    self.impressionTimer = MPAdImpressionTimer(requiredSecondsForImpression: 0.5, requiredViewVisibilityPercentage: 0.5)
+
+    super.init()
+    
+    impressionTimer.delegate = self
   }
-
-  func displayContent(for URL: URL!, rootViewController controller: UIViewController!) {
-
+  
+  func willAttach(to view: UIView!) {
+    willAttach(to: view, withAdContentViews: [])
   }
-
+  
+  func willAttach(to view: UIView!, withAdContentViews adContentViews: [Any]!) {
+    impressionTimer.startTrackingView(view)
+  }
+  
+  func adViewWillLogImpression(_ adView: UIView!) {
+    BNAdTracker().impressed(ad: ad)
+    delegate.nativeAdWillLogImpression?(self)
+  }
+  
   func trackClick() {
-//    nativeAd.handleClick()
+    BNAdTracker().clicked(ad: ad)
   }
-
-
+  
+  func displayContent(for URL: URL!, rootViewController controller: UIViewController!) {
+    if #available(iOS 10.0, *) {
+      UIApplication.shared.open(URL, options: [:], completionHandler: nil)
+    } else {
+      UIApplication.shared.openURL(URL)
+    }
+  }
 }
