@@ -4,7 +4,4 @@
    <FileRef
       location = "container:MopubAdapterSample.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../buzznative-sdk-ios/BuzzNative.xcodeproj">
-   </FileRef>
 </Workspace>

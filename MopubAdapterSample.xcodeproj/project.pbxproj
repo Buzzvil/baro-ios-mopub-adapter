@@ -229,8 +229,7 @@
 		2048452221250FAB006CF2F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048452121250FAB006CF2F0 /* CoreGraphics.framework */; };
 		2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048452B212547FA006CF2F0 /* MopubAdCell.swift */; };
 		2048452E212547FA006CF2F0 /* MopubAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2048452C212547FA006CF2F0 /* MopubAdCell.xib */; };
-		C43B5DF5214B4E3500275053 /* BuzzNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43B5DF4214B4E3400275053 /* BuzzNative.framework */; };
-		C43B5DF6214B4E5E00275053 /* BuzzNative.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C43B5DF4214B4E3400275053 /* BuzzNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48F2719216DDC7600A2E1A8 /* BuzzNative.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -240,7 +239,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C43B5DF6214B4E5E00275053 /* BuzzNative.framework in CopyFiles */,
+				C48F2719216DDC7600A2E1A8 /* BuzzNative.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +685,7 @@
 		2048452821251145006CF2F0 /* MopubAdapterSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MopubAdapterSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		2048452B212547FA006CF2F0 /* MopubAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MopubAdCell.swift; sourceTree = "<group>"; };
 		2048452C212547FA006CF2F0 /* MopubAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MopubAdCell.xib; sourceTree = "<group>"; };
-		C43B5DF4214B4E3400275053 /* BuzzNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuzzNative.framework; path = "../buzznative-sdk-ios/Output/BuzzNative.framework"; sourceTree = "<group>"; };
+		C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuzzNative.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -702,7 +701,6 @@
 				2048451C21250F9B006CF2F0 /* CoreTelephony.framework in Frameworks */,
 				2048451A21250F95006CF2F0 /* Foundation.framework in Frameworks */,
 				2048451821250F8F006CF2F0 /* MediaPlayer.framework in Frameworks */,
-				C43B5DF5214B4E3500275053 /* BuzzNative.framework in Frameworks */,
 				2048451621250F89006CF2F0 /* MessageUI.framework in Frameworks */,
 				2048451421250F83006CF2F0 /* QuartzCore.framework in Frameworks */,
 				2048451221250F7D006CF2F0 /* SafariServices.framework in Frameworks */,
@@ -1354,7 +1352,7 @@
 		2048450421250F51006CF2F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C43B5DF4214B4E3400275053 /* BuzzNative.framework */,
+				C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */,
 				2048452121250FAB006CF2F0 /* CoreGraphics.framework */,
 				2048451F21250FA5006CF2F0 /* CoreLocation.framework */,
 				2048451D21250FA0006CF2F0 /* CoreMedia.framework */,

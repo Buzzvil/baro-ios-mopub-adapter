@@ -56,7 +56,7 @@ class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDeleg
     BNAdTracker().impressed(ad: ad)
     delegate.nativeAdWillLogImpression?(self)
   }
-  
+
   func trackClick() {
     BNAdTracker().clicked(ad: ad)
   }

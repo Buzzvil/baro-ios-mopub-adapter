@@ -15,7 +15,7 @@ fileprivate var BuzzNativeInitialized = false
 class BuzzNativeCustomEvent: MPNativeCustomEvent {
   override func requestAd(withCustomEventInfo info: [AnyHashable : Any]!) {
     if !BuzzNativeInitialized {
-      BuzzNative.configure(logging: true)
+      BuzzNative.configure(logging: false)
       BuzzNativeInitialized = true
     }
 
