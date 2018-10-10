@@ -686,6 +686,7 @@
 		2048452B212547FA006CF2F0 /* MopubAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MopubAdCell.swift; sourceTree = "<group>"; };
 		2048452C212547FA006CF2F0 /* MopubAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MopubAdCell.xib; sourceTree = "<group>"; };
 		C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuzzNative.framework; sourceTree = "<group>"; };
+		C48F271A216DDD9F00A2E1A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -728,6 +729,7 @@
 		2048426C21250CD2006CF2F0 = {
 			isa = PBXGroup;
 			children = (
+				C48F271A216DDD9F00A2E1A8 /* README.md */,
 				203270FD2133C8130010D592 /* BuzzNative */,
 				2048428C21250DA0006CF2F0 /* MoPubSDK */,
 				2048427721250CD3006CF2F0 /* MopubAdapterSample */,

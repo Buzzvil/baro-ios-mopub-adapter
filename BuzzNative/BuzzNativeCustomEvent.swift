@@ -9,7 +9,7 @@
 import Foundation
 import BuzzNative
 
-fileprivate var BuzzNativeInitialized = false
+private var BuzzNativeInitialized = false
 
 @objc(BuzzNativeCustomEvent)
 class BuzzNativeCustomEvent: MPNativeCustomEvent {
