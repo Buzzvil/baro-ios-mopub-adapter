@@ -10,9 +10,16 @@ import Foundation
 import BuzzNative
 
 private var BuzzNativeInitialized = false
+private var TargetUserProfile: BNUserProfile?
+private var TargetLocation: BNLocation?
 
 @objc(BuzzNativeCustomEvent)
 class BuzzNativeCustomEvent: MPNativeCustomEvent {
+  public static func setTargeting(userProfile: BNUserProfile?, location: BNLocation?) {
+    TargetUserProfile = userProfile
+    TargetLocation = location
+  }
+
   override func requestAd(withCustomEventInfo info: [AnyHashable : Any]!) {
     if !BuzzNativeInitialized {
       BuzzNative.configure(logging: false)
@@ -21,7 +28,7 @@ class BuzzNativeCustomEvent: MPNativeCustomEvent {
 
     if let placementId = info["unitID"] as? String {
       let adLoader = BNAdLoader(unitId: placementId)
-      adLoader.loadAd(userProfile: nil, location: nil) { [weak self] (ad, error) in
+      adLoader.loadAd(userProfile: TargetUserProfile, location: TargetLocation) { [weak self] (ad, error) in
         if let ad = ad {
           let adAdapter = BuzzNativeAdAdapter(ad: ad)
           let mpAd = MPNativeAd(adAdapter: adAdapter)

@@ -1796,10 +1796,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoPubSDK/Viewability/MOAT",
-					"$(PROJECT_DIR)/../buzznative-sdk-ios/Output",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../buzznative-sdk-ios/Output";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MopubAdapterSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1826,10 +1825,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoPubSDK/Viewability/MOAT",
-					"$(PROJECT_DIR)/../buzznative-sdk-ios/Output",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../buzznative-sdk-ios/Output";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MopubAdapterSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

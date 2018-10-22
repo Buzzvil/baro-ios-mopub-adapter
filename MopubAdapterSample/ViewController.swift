@@ -23,6 +23,8 @@ class ViewController: UIViewController, MPTableViewAdPlacerDelegate {
     let config = MPStaticNativeAdRenderer.rendererConfiguration(with: settings)
     config?.supportedCustomEvents = ["BuzzNativeCustomEvent"]
 
+    BuzzNativeCustomEvent.setTargeting(userProfile: nil, location: nil)
+
     placer = MPTableViewAdPlacer(tableView: tableView, viewController: self, rendererConfigurations: [config!])
     placer.delegate = self;
 
