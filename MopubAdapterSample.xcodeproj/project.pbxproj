@@ -229,7 +229,7 @@
 		2048452221250FAB006CF2F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048452121250FAB006CF2F0 /* CoreGraphics.framework */; };
 		2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048452B212547FA006CF2F0 /* MopubAdCell.swift */; };
 		2048452E212547FA006CF2F0 /* MopubAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2048452C212547FA006CF2F0 /* MopubAdCell.xib */; };
-		C48F2719216DDC7600A2E1A8 /* BuzzNative.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4941EAF218BEE0C00E8B307 /* BuzzNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -239,7 +239,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C48F2719216DDC7600A2E1A8 /* BuzzNative.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +693,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4941EAF218BEE0C00E8B307 /* BuzzNative.framework in Frameworks */,
 				2048450621250F51006CF2F0 /* AdSupport.framework in Frameworks */,
 				2048450821250F59006CF2F0 /* AVFoundation.framework in Frameworks */,
 				2048452221250FAB006CF2F0 /* CoreGraphics.framework in Frameworks */,
