@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MoPub
 
 class ViewController: UIViewController, MPTableViewAdPlacerDelegate {
 

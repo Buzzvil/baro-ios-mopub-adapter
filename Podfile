@@ -7,5 +7,5 @@ target 'MopubAdapterSample' do
 
   # Pods for MopubAdapterSample
   pod 'BuzzNative'
-  pod 'Google-Mobile-Ads-SDK'
+  pod 'mopub-ios-sdk', '~> 5.0'
 end

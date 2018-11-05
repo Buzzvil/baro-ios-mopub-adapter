@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MoPub
 
 class MopubAdCell: UITableViewCell, MPNativeAdRendering {
   @IBOutlet weak var titleLabel: UILabel!

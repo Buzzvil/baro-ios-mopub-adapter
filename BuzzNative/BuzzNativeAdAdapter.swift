@@ -8,6 +8,7 @@
 
 import Foundation
 import BuzzNative
+import MoPub // Delete this line if you integrate MoPub with source codes
 
 @objc(BuzzNativeAdAdapter)
 class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDelegate {

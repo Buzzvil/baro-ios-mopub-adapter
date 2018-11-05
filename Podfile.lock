@@ -4,21 +4,31 @@ PODS:
     - Alamofire (~> 4.7)
     - Kingfisher (~> 4.0)
     - SwiftyJSON (~> 4.0)
-  - Google-Mobile-Ads-SDK (7.35.1)
   - Kingfisher (4.10.1)
+  - mopub-ios-sdk (5.4.0):
+    - mopub-ios-sdk/MoPubSDK (= 5.4.0)
+  - mopub-ios-sdk/Avid (5.4.0):
+    - mopub-ios-sdk/Core
+  - mopub-ios-sdk/Core (5.4.0)
+  - mopub-ios-sdk/Moat (5.4.0):
+    - mopub-ios-sdk/Core
+  - mopub-ios-sdk/MoPubSDK (5.4.0):
+    - mopub-ios-sdk/Avid
+    - mopub-ios-sdk/Core
+    - mopub-ios-sdk/Moat
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - BuzzNative
-  - Google-Mobile-Ads-SDK
+  - mopub-ios-sdk (~> 5.0)
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BuzzNative: c816f78be8bf54fea0b425b4ed556799a84fa069
-  Google-Mobile-Ads-SDK: 151d5e87b4a0ae6d7d07e2cd8d55d1b41ea2e61e
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  mopub-ios-sdk: 6e331c6cf6052426a750568578f55dd3de0a67f1
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: d49633b8ceb5180340317d01ce8695e86dee54b4
+PODFILE CHECKSUM: 5da2e0706f6aee66337e4555eb5e805b367256f5
 
 COCOAPODS: 1.4.0
