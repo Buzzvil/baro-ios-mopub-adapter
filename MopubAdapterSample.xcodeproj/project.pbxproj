@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		203271002133C8130010D592 /* BuzzNativeAdAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203270FE2133C8130010D592 /* BuzzNativeAdAdapter.swift */; };
-		203271012133C8130010D592 /* BuzzNativeCustomEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203270FF2133C8130010D592 /* BuzzNativeCustomEvent.swift */; };
+		203271002133C8130010D592 /* BAROAdAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203270FE2133C8130010D592 /* BAROAdAdapter.swift */; };
+		203271012133C8130010D592 /* BAROCustomEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203270FF2133C8130010D592 /* BAROCustomEvent.swift */; };
 		2048427921250CD3006CF2F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048427821250CD3006CF2F0 /* AppDelegate.swift */; };
 		2048427B21250CD3006CF2F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048427A21250CD3006CF2F0 /* ViewController.swift */; };
 		2048427E21250CD3006CF2F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2048427C21250CD3006CF2F0 /* Main.storyboard */; };
@@ -47,8 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		203270FE2133C8130010D592 /* BuzzNativeAdAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzNativeAdAdapter.swift; sourceTree = "<group>"; };
-		203270FF2133C8130010D592 /* BuzzNativeCustomEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzNativeCustomEvent.swift; sourceTree = "<group>"; };
+		203270FE2133C8130010D592 /* BAROAdAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAROAdAdapter.swift; sourceTree = "<group>"; };
+		203270FF2133C8130010D592 /* BAROCustomEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAROCustomEvent.swift; sourceTree = "<group>"; };
 		2048427521250CD3006CF2F0 /* MopubAdapterSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MopubAdapterSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2048427821250CD3006CF2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2048427A21250CD3006CF2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,13 +107,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		203270FD2133C8130010D592 /* BuzzNative */ = {
+		203270FD2133C8130010D592 /* BARO */ = {
 			isa = PBXGroup;
 			children = (
-				203270FE2133C8130010D592 /* BuzzNativeAdAdapter.swift */,
-				203270FF2133C8130010D592 /* BuzzNativeCustomEvent.swift */,
+				203270FE2133C8130010D592 /* BAROAdAdapter.swift */,
+				203270FF2133C8130010D592 /* BAROCustomEvent.swift */,
 			);
-			path = BuzzNative;
+			path = BARO;
 			sourceTree = "<group>";
 		};
 		2048426C21250CD2006CF2F0 = {
@@ -121,7 +121,7 @@
 			children = (
 				C4E7E7842190019200F09F73 /* Podfile */,
 				C48F271A216DDD9F00A2E1A8 /* README.md */,
-				203270FD2133C8130010D592 /* BuzzNative */,
+				203270FD2133C8130010D592 /* BARO */,
 				2048427721250CD3006CF2F0 /* MopubAdapterSample */,
 				2048427621250CD3006CF2F0 /* Products */,
 				2048450421250F51006CF2F0 /* Frameworks */,
@@ -287,7 +287,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${PODS_ROOT}/BuzzNative/BuzzNative.framework",
+				"${PODS_ROOT}/BARO/BARO.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/mopub-ios-sdk/MoPub.framework",
@@ -297,7 +297,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BuzzNative.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BARO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoPub.framework",
@@ -337,8 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2048427B21250CD3006CF2F0 /* ViewController.swift in Sources */,
-				203271002133C8130010D592 /* BuzzNativeAdAdapter.swift in Sources */,
-				203271012133C8130010D592 /* BuzzNativeCustomEvent.swift in Sources */,
+				203271002133C8130010D592 /* BAROAdAdapter.swift in Sources */,
+				203271012133C8130010D592 /* BAROCustomEvent.swift in Sources */,
 				2048427921250CD3006CF2F0 /* AppDelegate.swift in Sources */,
 				2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */,
 			);

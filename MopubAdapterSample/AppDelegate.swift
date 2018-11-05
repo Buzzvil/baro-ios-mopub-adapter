@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: "5e9875f612744641ac2ed9faeaf134b2")
 
     MoPub.sharedInstance().initializeSdk(with: sdkConfig, completion: nil)
+    MoPub.sharedInstance().logLevel = MPLogLevelOff
 
     return true
   }

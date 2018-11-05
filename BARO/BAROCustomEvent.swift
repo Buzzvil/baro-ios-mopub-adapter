@@ -1,5 +1,5 @@
 //
-//  BuzzNativeCustomEvent.swift
+//  BAROCustomEvent.swift
 //  MopubAdapterSample
 //
 //  Created by Jaehee Ko on 27/08/2018.
@@ -7,31 +7,31 @@
 //
 
 import Foundation
-import BuzzNative
+import BARO
 import MoPub // Delete this line if you integrate MoPub with source codes
 
-private var BuzzNativeInitialized = false
-private var TargetUserProfile: BNUserProfile?
-private var TargetLocation: BNLocation?
+private var BAROInitialized = false
+private var TargetUserProfile: BRUserProfile?
+private var TargetLocation: BRLocation?
 
-@objc(BuzzNativeCustomEvent)
-class BuzzNativeCustomEvent: MPNativeCustomEvent {
-  public static func setTargeting(userProfile: BNUserProfile?, location: BNLocation?) {
+@objc(BAROCustomEvent)
+class BAROCustomEvent: MPNativeCustomEvent {
+  public static func setTargeting(userProfile: BRUserProfile?, location: BRLocation?) {
     TargetUserProfile = userProfile
     TargetLocation = location
   }
 
   override func requestAd(withCustomEventInfo info: [AnyHashable : Any]!) {
-    if !BuzzNativeInitialized {
-      BuzzNative.configure(logging: false)
-      BuzzNativeInitialized = true
+    if !BAROInitialized {
+      BARO.configure(logging: false)
+      BAROInitialized = true
     }
 
     if let placementId = info["unitID"] as? String {
-      let adLoader = BNAdLoader(unitId: placementId)
+      let adLoader = BRAdLoader(unitId: placementId)
       adLoader.loadAd(userProfile: TargetUserProfile, location: TargetLocation) { [weak self] (ad, error) in
         if let ad = ad {
-          let adAdapter = BuzzNativeAdAdapter(ad: ad)
+          let adAdapter = BAROAdAdapter(ad: ad)
           let mpAd = MPNativeAd(adAdapter: adAdapter)
           
           if let urlString = ad.creative.imageURL, let url = URL(string: urlString) {

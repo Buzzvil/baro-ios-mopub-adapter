@@ -1,5 +1,5 @@
 //
-//  BuzzNativeAdAdapter.swift
+//  BAROAdAdapter.swift
 //  MopubAdapterSample
 //
 //  Created by Jaehee Ko on 27/08/2018.
@@ -7,20 +7,20 @@
 //
 
 import Foundation
-import BuzzNative
+import BARO
 import MoPub // Delete this line if you integrate MoPub with source codes
 
-@objc(BuzzNativeAdAdapter)
-class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDelegate {
+@objc(BAROAdAdapter)
+class BAROAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDelegate {
   var properties: [AnyHashable : Any]!
   var defaultActionURL: URL!
   var delegate: MPNativeAdAdapterDelegate!
   
   let impressionTimer: MPAdImpressionTimer
   
-  var ad: BNAd!
+  var ad: BRAd!
 
-  init(ad: BNAd) {
+  init(ad: BRAd) {
     self.ad = ad
 
     var properties: [AnyHashable: Any] = [:]
@@ -54,12 +54,12 @@ class BuzzNativeAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDeleg
   }
   
   func adViewWillLogImpression(_ adView: UIView!) {
-    BNAdTracker().impressed(ad: ad)
+    BRAdTracker().impressed(ad: ad)
     delegate.nativeAdWillLogImpression?(self)
   }
 
   func trackClick() {
-    BNAdTracker().clicked(ad: ad)
+    BRAdTracker().clicked(ad: ad)
   }
   
   func displayContent(for URL: URL!, rootViewController controller: UIViewController!) {

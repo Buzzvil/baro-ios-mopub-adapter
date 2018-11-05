@@ -22,9 +22,9 @@ class ViewController: UIViewController, MPTableViewAdPlacerDelegate {
     settings.viewSizeHandler = { maxWidth in return CGSize(width: maxWidth, height: 180) }
 
     let config = MPStaticNativeAdRenderer.rendererConfiguration(with: settings)
-    config?.supportedCustomEvents = ["BuzzNativeCustomEvent"]
+    config?.supportedCustomEvents = ["BAROCustomEvent"]
 
-    BuzzNativeCustomEvent.setTargeting(userProfile: nil, location: nil)
+    BAROCustomEvent.setTargeting(userProfile: nil, location: nil)
 
     placer = MPTableViewAdPlacer(tableView: tableView, viewController: self, rendererConfigurations: [config!])
     placer.delegate = self;

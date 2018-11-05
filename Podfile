@@ -6,6 +6,6 @@ target 'MopubAdapterSample' do
   use_frameworks!
 
   # Pods for MopubAdapterSample
-  pod 'BuzzNative', '~> 2.0'
+  pod 'BARO', '~> 2.0'
   pod 'mopub-ios-sdk', '~> 5.0'
 end
