@@ -229,7 +229,7 @@
 		2048452221250FAB006CF2F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048452121250FAB006CF2F0 /* CoreGraphics.framework */; };
 		2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048452B212547FA006CF2F0 /* MopubAdCell.swift */; };
 		2048452E212547FA006CF2F0 /* MopubAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2048452C212547FA006CF2F0 /* MopubAdCell.xib */; };
-		C4941EAF218BEE0C00E8B307 /* BuzzNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */; };
+		D4415D50E4BFBAA53B884F00 /* Pods_MopubAdapterSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C6134949FAB66A0B0A93E /* Pods_MopubAdapterSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -684,8 +684,11 @@
 		2048452821251145006CF2F0 /* MopubAdapterSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MopubAdapterSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		2048452B212547FA006CF2F0 /* MopubAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MopubAdCell.swift; sourceTree = "<group>"; };
 		2048452C212547FA006CF2F0 /* MopubAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MopubAdCell.xib; sourceTree = "<group>"; };
-		C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuzzNative.framework; sourceTree = "<group>"; };
+		839C6134949FAB66A0B0A93E /* Pods_MopubAdapterSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MopubAdapterSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		895568D08B03C7369EDA3438 /* Pods-MopubAdapterSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MopubAdapterSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample.release.xcconfig"; sourceTree = "<group>"; };
 		C48F271A216DDD9F00A2E1A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C4E7E7842190019200F09F73 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E91E268B6AE0A7C670E1034A /* Pods-MopubAdapterSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MopubAdapterSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -693,7 +696,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4941EAF218BEE0C00E8B307 /* BuzzNative.framework in Frameworks */,
 				2048450621250F51006CF2F0 /* AdSupport.framework in Frameworks */,
 				2048450821250F59006CF2F0 /* AVFoundation.framework in Frameworks */,
 				2048452221250FAB006CF2F0 /* CoreGraphics.framework in Frameworks */,
@@ -711,6 +713,7 @@
 				2048450A21250F64006CF2F0 /* WebKit.framework in Frameworks */,
 				2048446721250DA1006CF2F0 /* MPUBMoatMobileAppKit.framework in Frameworks */,
 				2048446621250DA1006CF2F0 /* libAvid-mopub-3.6.1.a in Frameworks */,
+				D4415D50E4BFBAA53B884F00 /* Pods_MopubAdapterSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,12 +732,14 @@
 		2048426C21250CD2006CF2F0 = {
 			isa = PBXGroup;
 			children = (
+				C4E7E7842190019200F09F73 /* Podfile */,
 				C48F271A216DDD9F00A2E1A8 /* README.md */,
 				203270FD2133C8130010D592 /* BuzzNative */,
 				2048428C21250DA0006CF2F0 /* MoPubSDK */,
 				2048427721250CD3006CF2F0 /* MopubAdapterSample */,
 				2048427621250CD3006CF2F0 /* Products */,
 				2048450421250F51006CF2F0 /* Frameworks */,
+				C7E15823824919B32F1309EB /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -1354,7 +1359,6 @@
 		2048450421250F51006CF2F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C48F2717216DDC6900A2E1A8 /* BuzzNative.framework */,
 				2048452121250FAB006CF2F0 /* CoreGraphics.framework */,
 				2048451F21250FA5006CF2F0 /* CoreLocation.framework */,
 				2048451D21250FA0006CF2F0 /* CoreMedia.framework */,
@@ -1370,8 +1374,18 @@
 				2048450921250F63006CF2F0 /* WebKit.framework */,
 				2048450721250F59006CF2F0 /* AVFoundation.framework */,
 				2048450521250F51006CF2F0 /* AdSupport.framework */,
+				839C6134949FAB66A0B0A93E /* Pods_MopubAdapterSample.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7E15823824919B32F1309EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E91E268B6AE0A7C670E1034A /* Pods-MopubAdapterSample.debug.xcconfig */,
+				895568D08B03C7369EDA3438 /* Pods-MopubAdapterSample.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1381,10 +1395,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2048428721250CD5006CF2F0 /* Build configuration list for PBXNativeTarget "MopubAdapterSample" */;
 			buildPhases = (
+				FCF04CA029E43FF2C3097D09 /* [CP] Check Pods Manifest.lock */,
 				2048427121250CD3006CF2F0 /* Sources */,
 				2048427221250CD3006CF2F0 /* Frameworks */,
 				2048427321250CD3006CF2F0 /* Resources */,
 				203270F4213393450010D592 /* CopyFiles */,
+				6BEA0F5D1597F488CD247C25 /* [CP] Embed Pods Frameworks */,
+				213301B33C67B4075F82C67A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1463,6 +1480,78 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		213301B33C67B4075F82C67A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BEA0F5D1597F488CD247C25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/BuzzNative/BuzzNative.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BuzzNative.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCF04CA029E43FF2C3097D09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MopubAdapterSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2048427121250CD3006CF2F0 /* Sources */ = {
@@ -1789,16 +1878,17 @@
 		};
 		2048428821250CD5006CF2F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E91E268B6AE0A7C670E1034A /* Pods-MopubAdapterSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67369282ZY;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoPubSDK/Viewability/MOAT",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MopubAdapterSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1818,16 +1908,17 @@
 		};
 		2048428921250CD5006CF2F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 895568D08B03C7369EDA3438 /* Pods-MopubAdapterSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67369282ZY;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoPubSDK/Viewability/MOAT",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MopubAdapterSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
