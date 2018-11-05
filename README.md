@@ -1,40 +1,14 @@
 ## BuzzNative iOS MoPub Adapter 연동 가이드
 본 문서에서는 iOS 앱에서 MoPub에 BuzzNative를 mediation으로 추가하는 방법을 설명합니다.
 
-### 1. Download BuzzNative SDK and Adapter
-`BuzzNative.framework`와 `BuzzNative/` 폴더를 다운로드 합니다.
+### 1. Integrate BuzzNative via Cocoapods
+`Podfile`에 `pod 'BuzzNative', '~> 2.0'`을 추가한 후 `pod install`을 실행합니다.
 
-### 2. Add Adapter Files to Your Project
+### 2. Download Adapter
+`BuzzNative/` 폴더를 다운로드 합니다.
+
+### 3. Add Adapter Files to Your Project
 `BuzzNative/` 폴더를 프로젝트에 추가합니다. `BuzzNative/` 폴더 안에는 `BuzzNativeCustomEvent.swift`와 `BuzzNativeAdAdapter.swift` 두 개의 파일이 들어 있습니다.
-
-### 3. Embed BuzzNative.framework 
-1. `BuzzNative.framework`을 `Build Phases > Embed Frameworks`에 추가합니다.
-2. `Build Phases`에 `Run Script`를 추가하고 아래의 script를 입력합니다. (Universal Framework으로 빌드된 BuzzNative.framework에서 불필요한 architecture를 제거해줍니다.)
-```sh
-APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
-
-find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK; do
-FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
-FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
-
-EXTRACTED_ARCHS=()
-
-for ARCH in $ARCHS; do
-echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
-lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
-EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
-done
-
-echo "Merging extracted architectures: ${ARCHS}"
-lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
-rm "${EXTRACTED_ARCHS[@]}"
-
-echo "Replacing original executable with thinned version"
-rm "$FRAMEWORK_EXECUTABLE_PATH"
-mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
-
-done
-```
 
 ### 4. Configure BuzzNative Network in MoPub Dashboard
 Adapter를 통해 BuzzNative 광고를 받아오려면 BuzzNative의 *Placement ID*가 필요합니다. *Placement ID*를 발급받지 못했다면 담당자에게 문의바랍니다.
