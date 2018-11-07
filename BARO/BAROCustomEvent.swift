@@ -23,7 +23,7 @@ class BAROCustomEvent: MPNativeCustomEvent {
 
   override func requestAd(withCustomEventInfo info: [AnyHashable : Any]!) {
     if !BAROInitialized {
-      BARO.configure(logging: false)
+      BARO.configure(logging: true)
       BAROInitialized = true
     }
 

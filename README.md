@@ -16,7 +16,7 @@ Adapter를 통해 BARO 광고를 받아오려면 BARO의 *Placement ID*가 필�
 3. 필요한 정보를 입력하고 *App & ad unit setup* 단계로 이동합니다.
 4. BARO 광고를 받아올 지면에 아래 값을 입력합니다.
 - Custom Event Class: BAROCustomEvent
-- Custom Event Class Data: {"PLACEMENT":"YOUR_PLACEMENT_ID"}
+- Custom Event Class Data: {"unitID":"YOUR_PLACEMENT_ID"}
 
 ### 4. Register BAROCustomEvent to MoPub Ad Renderer
 1. 다음과 같이 `supportedCustomEvents`에 `BAROCustomEvent`를 추가합니다.
