@@ -7,5 +7,7 @@ target 'MopubAdapterSample' do
 
   # Pods for MopubAdapterSample
   pod 'BARO', '~> 2.0'
-  pod 'mopub-ios-sdk', '~> 5.0'
+  pod 'mopub-ios-sdk', '~> 5.3.0'
+  pod 'MoPub-AdMob-Adapters'
+  pod 'MoPub-FacebookAudienceNetwork-Adapters'
 end

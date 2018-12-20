@@ -1,34 +1,76 @@
 PODS:
-  - Alamofire (4.7.3)
-  - BARO (2.1.1):
-    - Alamofire (~> 4.7)
-    - Kingfisher (~> 4.9.0)
-    - SwiftyJSON (~> 4.1.0)
-  - Kingfisher (4.9.0)
-  - mopub-ios-sdk (5.4.0):
-    - mopub-ios-sdk/MoPubSDK (= 5.4.0)
-  - mopub-ios-sdk/Avid (5.4.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BARO (2.2.2):
+    - AFNetworking (~> 3.0)
+    - BARO/Core (= 2.2.2)
+    - SDWebImage (~> 4.0)
+  - BARO/Core (2.2.2):
+    - AFNetworking (~> 3.0)
+    - SDWebImage (~> 4.0)
+  - FBAudienceNetwork (4.99.2)
+  - Google-Mobile-Ads-SDK (7.36.0)
+  - MoPub-AdMob-Adapters (7.36.0.0):
+    - Google-Mobile-Ads-SDK (= 7.36.0)
+    - mopub-ios-sdk (~> 5.0)
+  - MoPub-FacebookAudienceNetwork-Adapters (4.99.2.1):
+    - FBAudienceNetwork (= 4.99.2)
+    - mopub-ios-sdk (~> 5.0)
+  - mopub-ios-sdk (5.3.0):
+    - mopub-ios-sdk/MoPubSDK (= 5.3.0)
+  - mopub-ios-sdk/Avid (5.3.0):
     - mopub-ios-sdk/Core
-  - mopub-ios-sdk/Core (5.4.0)
-  - mopub-ios-sdk/Moat (5.4.0):
+  - mopub-ios-sdk/Core (5.3.0)
+  - mopub-ios-sdk/Moat (5.3.0):
     - mopub-ios-sdk/Core
-  - mopub-ios-sdk/MoPubSDK (5.4.0):
+  - mopub-ios-sdk/MoPubSDK (5.3.0):
     - mopub-ios-sdk/Avid
     - mopub-ios-sdk/Core
     - mopub-ios-sdk/Moat
-  - SwiftyJSON (4.1.0)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
 
 DEPENDENCIES:
   - BARO (~> 2.0)
-  - mopub-ios-sdk (~> 5.0)
+  - MoPub-AdMob-Adapters
+  - MoPub-FacebookAudienceNetwork-Adapters
+  - mopub-ios-sdk (~> 5.3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - BARO
+    - FBAudienceNetwork
+    - Google-Mobile-Ads-SDK
+    - MoPub-AdMob-Adapters
+    - MoPub-FacebookAudienceNetwork-Adapters
+    - mopub-ios-sdk
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  BARO: 22416ecdfd36d587e00e840e3ea249922be0c6e9
-  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
-  mopub-ios-sdk: 6e331c6cf6052426a750568578f55dd3de0a67f1
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BARO: 364d20be2db1c84b2ce4edf26413274cf74e3311
+  FBAudienceNetwork: 2c1d8fc39ad0056914b572a02130f053f53aa82d
+  Google-Mobile-Ads-SDK: 5bb4d2cea811842e104a24780caef63b4808e1bd
+  MoPub-AdMob-Adapters: ddab337c3cc49893946b063c70455dc754bbfb65
+  MoPub-FacebookAudienceNetwork-Adapters: e22124205d70cab56cda2c315163182b0dd2d226
+  mopub-ios-sdk: 995d0cf8bbb5f9e81389ac981c2f1555dc77e84f
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
 
-PODFILE CHECKSUM: d73e4a4cd0492e0bb645ffd8a03f74ae2ef8409d
+PODFILE CHECKSUM: c1a4498e49cfc83349a62a0bf24fd18fda40569d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

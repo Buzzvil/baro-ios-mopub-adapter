@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: "5e9875f612744641ac2ed9faeaf134b2")
+    let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: "279806f39aa84eda9efef8b94433373c")
 
     MoPub.sharedInstance().initializeSdk(with: sdkConfig, completion: nil)
-    MoPub.sharedInstance().logLevel = MPLogLevelOff
+//    MoPub.sharedInstance().logLevel = MPLogLevelOff
 
     return true
   }

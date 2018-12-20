@@ -31,6 +31,8 @@
 		2048452221250FAB006CF2F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048452121250FAB006CF2F0 /* CoreGraphics.framework */; };
 		2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048452B212547FA006CF2F0 /* MopubAdCell.swift */; };
 		2048452E212547FA006CF2F0 /* MopubAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2048452C212547FA006CF2F0 /* MopubAdCell.xib */; };
+		C4044B9A21AE87B20011931C /* MopubAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4044B9921AE87B20011931C /* MopubAdView.swift */; };
+		C4044B9C21AE8C4F0011931C /* MopubAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4044B9B21AE8C4F0011931C /* MopubAdView.xib */; };
 		D4415D50E4BFBAA53B884F00 /* Pods_MopubAdapterSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C6134949FAB66A0B0A93E /* Pods_MopubAdapterSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +53,7 @@
 		203270FF2133C8130010D592 /* BAROCustomEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAROCustomEvent.swift; sourceTree = "<group>"; };
 		2048427521250CD3006CF2F0 /* MopubAdapterSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MopubAdapterSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2048427821250CD3006CF2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2048427A21250CD3006CF2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2048427A21250CD3006CF2F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		2048427D21250CD3006CF2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2048427F21250CD5006CF2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2048428221250CD5006CF2F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		2048452C212547FA006CF2F0 /* MopubAdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MopubAdCell.xib; sourceTree = "<group>"; };
 		839C6134949FAB66A0B0A93E /* Pods_MopubAdapterSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MopubAdapterSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		895568D08B03C7369EDA3438 /* Pods-MopubAdapterSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MopubAdapterSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample.release.xcconfig"; sourceTree = "<group>"; };
+		C4044B9921AE87B20011931C /* MopubAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MopubAdView.swift; sourceTree = "<group>"; };
+		C4044B9B21AE8C4F0011931C /* MopubAdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MopubAdView.xib; sourceTree = "<group>"; };
 		C48F271A216DDD9F00A2E1A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4E7E7842190019200F09F73 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E91E268B6AE0A7C670E1034A /* Pods-MopubAdapterSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MopubAdapterSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				2048427F21250CD5006CF2F0 /* Assets.xcassets */,
 				2048428121250CD5006CF2F0 /* LaunchScreen.storyboard */,
 				2048428421250CD5006CF2F0 /* Info.plist */,
+				C4044B9921AE87B20011931C /* MopubAdView.swift */,
+				C4044B9B21AE8C4F0011931C /* MopubAdView.xib */,
 			);
 			path = MopubAdapterSample;
 			sourceTree = "<group>";
@@ -199,7 +205,6 @@
 				2048427321250CD3006CF2F0 /* Resources */,
 				203270F4213393450010D592 /* CopyFiles */,
 				6BEA0F5D1597F488CD247C25 /* [CP] Embed Pods Frameworks */,
-				213301B33C67B4075F82C67A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,27 +257,13 @@
 				2048428021250CD5006CF2F0 /* Assets.xcassets in Resources */,
 				2048452E212547FA006CF2F0 /* MopubAdCell.xib in Resources */,
 				2048427E21250CD3006CF2F0 /* Main.storyboard in Resources */,
+				C4044B9C21AE8C4F0011931C /* MopubAdView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		213301B33C67B4075F82C67A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6BEA0F5D1597F488CD247C25 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,18 +271,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MopubAdapterSample/Pods-MopubAdapterSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${PODS_ROOT}/BARO/BARO.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/mopub-ios-sdk/MoPub.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BARO.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoPub.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +318,7 @@
 				203271012133C8130010D592 /* BAROCustomEvent.swift in Sources */,
 				2048427921250CD3006CF2F0 /* AppDelegate.swift in Sources */,
 				2048452D212547FA006CF2F0 /* MopubAdCell.swift in Sources */,
+				C4044B9A21AE87B20011931C /* MopubAdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,12 +466,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67369282ZY;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dap/SDK",
+				);
 				INFOPLIST_FILE = MopubAdapterSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.buzzvil.MopubAdapterSample;
+				PRODUCT_BUNDLE_IDENTIFIER = droom.sleepIfUCanFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -496,12 +491,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67369282ZY;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dap/SDK",
+				);
 				INFOPLIST_FILE = MopubAdapterSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.buzzvil.MopubAdapterSample;
+				PRODUCT_BUNDLE_IDENTIFIER = droom.sleepIfUCanFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

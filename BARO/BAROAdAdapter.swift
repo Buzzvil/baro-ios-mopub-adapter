@@ -18,9 +18,9 @@ class BAROAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDelegate {
   
   let impressionTimer: MPAdImpressionTimer
   
-  var ad: BRAd!
+  var ad: BAROAd!
 
-  init(ad: BRAd) {
+  init(ad: BAROAd) {
     self.ad = ad
 
     var properties: [AnyHashable: Any] = [:]
@@ -54,12 +54,12 @@ class BAROAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDelegate {
   }
   
   func adViewWillLogImpression(_ adView: UIView!) {
-    BRAdTracker().impressed(ad: ad)
+    BAROAdTracker.adImpressed(ad)
     delegate.nativeAdWillLogImpression?(self)
   }
 
   func trackClick() {
-    BRAdTracker().clicked(ad: ad)
+    BAROAdTracker.adClicked(ad)
   }
   
   func displayContent(for URL: URL!, rootViewController controller: UIViewController!) {
