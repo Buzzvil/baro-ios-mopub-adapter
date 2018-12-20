@@ -2,8 +2,8 @@
 본 문서에서는 iOS 앱에서 MoPub에 BARO를 mediation으로 추가하는 방법을 설명합니다.
 
 ### 1. Integrate BARO via Cocoapods
-`Podfile`에 `pod 'BARO', '~> 2.0'`을 추가한 후 `pod install`을 실행합니다.
-> `[!] Unable to find a specification for BARO (~> 2.0)` 에러가 발생하는 경우 `pod repo update`를 실행 후 다시 `pod install`을 실행합니다. 
+`Podfile`에 `pod 'BARO', '~> 2.2.0'`을 추가한 후 `pod install`을 실행합니다.
+> `[!] Unable to find a specification for BARO (~> 2.2.0)` 에러가 발생하는 경우 `pod repo update`를 실행 후 다시 `pod install`을 실행합니다. 
 
 ### 2. Add Adapter Files to Your Project
 `BARO/` 폴더를 다운로드 한 뒤 프로젝트에 추가합니다. `BARO/` 폴더 안에는 `BAROCustomEvent.swift`와 `BAROAdAdapter.swift` 두 개의 파일이 들어 있습니다.
