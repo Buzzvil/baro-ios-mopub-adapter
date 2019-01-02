@@ -25,7 +25,7 @@ class BAROAdAdapter: NSObject, MPNativeAdAdapter, MPAdImpressionTimerDelegate {
 
     var properties: [AnyHashable: Any] = [:]
     properties[kAdTitleKey] = ad.creative.title
-    properties[kAdTextKey] = ad.creative.description
+    properties[kAdTextKey] = ad.creative.body
     properties[kAdMainImageKey] = ad.creative.imageURL
     properties[kAdIconImageKey] = ad.creative.iconURL
     properties[kAdCTATextKey] = ad.creative.callToAction
